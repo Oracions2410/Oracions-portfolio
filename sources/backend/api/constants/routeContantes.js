@@ -1,0 +1,21 @@
+const API_SUFFIX = '/api/v1'
+
+const CONTACT_BASE_END_POINT = `${API_SUFFIX}/contacts`
+const FILE_BASE_END_POINT = `${API_SUFFIX}/files`
+const LANGUAGE_BASE_END_POINT = `${API_SUFFIX}/languages`
+const LINK_BASE_END_POINT = `${API_SUFFIX}/links`
+const POST_BASE_END_POINT = `${API_SUFFIX}/posts`
+const PROJECT_BASE_END_POINT = `${API_SUFFIX}/projects`
+const TECH_BASE_END_POINT = `${API_SUFFIX}/technologies`
+
+
+module.exports = {
+    API_SUFFIX,
+    CONTACT_BASE_END_POINT,
+    FILE_BASE_END_POINT,
+    LANGUAGE_BASE_END_POINT,
+    LINK_BASE_END_POINT,
+    POST_BASE_END_POINT,
+    PROJECT_BASE_END_POINT,
+    TECH_BASE_END_POINT
+}
