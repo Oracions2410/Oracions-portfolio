@@ -148,7 +148,7 @@ function update(req, res) {
     Link.updateOne({ _id: linkId }, { $set: toUpdate })
         .then(result => {
             res.status(200).json({
-                message: '',
+                message: `${textConstants.ENTRY_UPDATED_TEXT}`,
                 request: {
                     type: 'GET',
                     url: `${req.protocol}://${req.get('host') + routeConstants.LINK_BASE_END_POINT}/${linkId}`
@@ -162,7 +162,7 @@ function update(req, res) {
 }
 
 function remove(req, res) {
-    const { linkId } = req.params
+    const linkId = req.params.linkId
     Link.deleteOne({ _id: linkId })
         .then(result => {
             console.log('Link Deleted')

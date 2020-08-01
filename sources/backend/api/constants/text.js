@@ -7,7 +7,7 @@ module.exports = {
 
 
     //------------------Text errors -----------------------------------------------
-    NOT_ENTRY_FOUND: 'Aucun contact trouvé',
+    NOT_ENTRY_FOUND: 'Aucune entrée trouvée',
     MAX_LENGTH_TEXT_ERROR: 'La taille des champs doit être inférieur à 255 caractères',
     MIN_LENGTH_TEXT_ERROR: 'Chaque champs doit avoir au moins 2 caractères',
     UNDEFIED_FIELDS_TEXT_ERROR: 'vous devez remplir au moins un champs',

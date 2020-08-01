@@ -161,7 +161,7 @@ function update(req, res) {
     Contact.updateOne({ _id: contactId }, { $set: toUpdate })
         .then(result => {
             res.status(200).json({
-                message: '',
+                message: `${textConstants.ENTRY_UPDATED_TEXT}`,
                 request: {
                     type: 'GET',
                     url: `${req.protocol}://${req.get('host') + routeConstants.CONTACT_BASE_END_POINT}/${contactId}`
