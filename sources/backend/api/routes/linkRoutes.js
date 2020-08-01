@@ -5,7 +5,8 @@ const linkCtrl = require('../controllers/linkController')
 
 router.post('/', linkCtrl.create)
 router.get('/', linkCtrl.findAll)
-router.patch('/:contactId', linkCtrl.update)
-router.delete('/:contactId', linkCtrl.remove)
+router.get('/:linkId', linkCtrl.findById)
+router.patch('/:linkId', linkCtrl.update)
+router.delete('/:linkId', linkCtrl.remove)
 
 module.exports = router

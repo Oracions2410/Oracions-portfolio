@@ -12,13 +12,38 @@ function create(req, res) {
         return res.status(400).json({ error: `${textConstants.ALL_FIELS_MUST_BE_PROVIDE_TEXT_ERROR} (name, object, email, message)` })
     }
 
+    //--------------- Validation -------------------------------------------------------
+    const MaxLenValidate = maxLen({ name, object, email, message })
+    if (!MaxLenValidate.status) {
+        return res.status(400).json({ error: `${textConstants.MAX_LENGTH_TEXT_ERROR}`, fileds: MaxLenValidate.fields })
+    }
+
+    const minLenValidate = minLen({ name, object, email, message })
+    if (!minLenValidate.status) {
+        return res.status(400).json({ error: `${textConstants.MIN_LENGTH_TEXT_ERROR}`, fileds: minLenValidate.fields })
+    }
+
+    if (!(name || object || email || message)) {
+        return res.status(400).json({ message: `${textConstants.UNDEFIED_FIELDS_TEXT_ERROR} (name, object, email, message)` })
+    }
+    //-------X------- Validation -----------------X-------------------------------------
+
+
+    // --------------------- Email validation -----------------------------------------
+    if (!validateEmail(email)) return res.status(400).json({ error: `${textConstants.INVALID_EMAIL_TEXT_ERROR}` })
+
+
     const newContact = new Contact({ name, email, object, message })
     newContact.save()
         .then(result => {
             res.status(200).json({
                 message: textConstants.ENTRY_CREATED_TEXT,
                 newContact: {
-                    name, object, email, message, request: {
+                    name: newContact.name,
+                    object: newContact.object,
+                    email: newContact.email,
+                    message: newContact.message,
+                    request: {
                         type: 'GET',
                         url: `${req.protocol}://${req.get('host') + routeConstants.CONTACT_BASE_END_POINT}`
                     }
@@ -48,9 +73,9 @@ function findAll(req, res) {
             res.status(200).json({
                 count: contacts.length,
                 contacts: contacts.map(contact => {
-                    const { _id, name, object, email, message } = contact
+                    const { _id, name, object, email, message, createdAt, updatedAt } = contact
                     return {
-                        _id, name, object, email, message, request: {
+                        _id, name, object, email, message, createdAt, updatedAt, request: {
                             type: 'GET',
                             url: `${req.protocol}://${req.get('host') + routeConstants.CONTACT_BASE_END_POINT}/${_id}`
                         }
@@ -76,9 +101,9 @@ function findById(req, res) {
             if (contact) {
                 console.log(contact)
 
-                const { _id, name, object, email, message } = contact
+                const { _id, name, object, email, message, createdAt, updatedAt } = contact
                 res.status(200).json({
-                    _id, name, object, email, message, request: {
+                    _id, name, object, email, message, createdAt, updatedAt, request: {
                         type: 'GET',
                         url: `${req.protocol}://${req.get('host') + routeConstants.CONTACT_BASE_END_POINT}`
                     }
@@ -120,7 +145,7 @@ function update(req, res) {
     }
     //-------X------- Validation -----------------X-------------------------------------
 
-    const toUpdate = {}
+    const toUpdate = { updatedAt: Date.now() }
     const keys = Object.keys(req.body)
 
     if (keys.includes('name')) toUpdate.name = name
@@ -167,7 +192,9 @@ function remove(req, res) {
                         object: 'String',
                         email: 'String',
                         message: 'String'
-                    }
+                    },
+                    url: `${req.protocol}://${req.get('host') + routeConstants.CONTACT_BASE_END_POINT}`
+
                 }
             })
         })
