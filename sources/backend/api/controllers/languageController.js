@@ -52,6 +52,9 @@ function create(req, res) {
         })
 }
 
+
+
+
 function findAll(req, res) {
     Language.find()
         .then(languages => {
@@ -66,7 +69,7 @@ function findAll(req, res) {
 
             res.status(200).json({
                 count: languages.length,
-                links: languages.map(language => {
+                languages: languages.map(language => {
                     const { _id, description, name, createdAt, updatedAt } = language
                     return {
                         _id, description, name, createdAt, updatedAt, request: {
