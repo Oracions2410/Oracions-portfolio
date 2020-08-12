@@ -13,18 +13,21 @@ const techRoutes = require('./api/routes/techRoutes')
 
 const constants = require('./api/constants/routeContantes')
 const db = require('./api/database/mongo')
+const multer = require('./api/middlewares/multer')
 
 db.mongoConnect()
 
 
 app.use('/ping', (req, res) => {
-    res.send(`Server is running on ${req.protocol}://${req.get('host')}`)
+    res.send(`<h3>Server is running on <span style="color: #007BFF">${req.protocol}://${req.get('host')}/api</span></h3>`)
 })
 
 
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(express.static('assets'))
+
 
 
 // ----------------------  Routes ------------------------------

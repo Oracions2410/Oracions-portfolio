@@ -74,7 +74,7 @@ function findAll(req, res) {
                     return {
                         _id, name, description, language, experience, createdAt, updatedAt, request: {
                             type: 'GET',
-                            name: `${req.protocol}://${req.get('host') + routeConstants.TECH_BASE_END_POINT}/${_id}`
+                            url: `${req.protocol}://${req.get('host') + routeConstants.TECH_BASE_END_POINT}/${_id}`
                         }
                     }
                 })

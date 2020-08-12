@@ -1,0 +1,770 @@
+@import './variables';
+
+* {
+    box-sizing: border-box;
+}
+
+/*---------- Global styles -------------*/
+
+.container {
+    width: 100%;
+    padding: 2rem 10rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: $background;
+}
+
+.btn.more {
+    width: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: .1rem;
+    border: 1px solid $primary;
+    padding: .7rem 2rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    color: $black;
+    font-size: 1.2rem;
+
+    img {
+        margin: 0 1rem;
+        width: 1.2rem;
+    }
+
+    &:hover {
+        background-color: $background;
+        border-color: $background;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    
+}
+/*---X------ Global styles ------X------*/
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $Open-sans;
+    background-color: $background;
+    margin: 0;
+    font-size: 1.6rem;
+    height: 2400px;
+
+    .scroll-top {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 4rem;
+        background-color: $secondary;
+        z-index: 99;
+        position: fixed;
+        bottom: 2rem;right: 2rem;
+        border: .1rem solid $white;
+    }
+
+    /*----------- Header ----------*/
+    
+    .header {
+        
+        background-color: $primary;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+        .topbar {
+            width: 100%;
+            min-height: 30px;
+            height: 3rem;
+            background-color: $white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 5rem;
+
+            span  {
+                font-size: 1.2rem;
+            }
+            img {
+                height: 2rem;
+                width: auto;
+                margin: 0 1rem;
+            }
+        }
+
+        .banner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .left-image {
+                width: 30.5rem;
+                margin-top: 0;
+                margin-left: -1rem;
+            }
+            .right-image {
+                width: 50%;
+                margin-right: -5rem;
+            }
+           .intro {
+               position: absolute;
+               left: 30%;
+               top: calc(50vh - 10rem);
+               text-align: center;
+               padding: 2rem;
+               color: $white;
+               width: 40%;
+
+              .text-intro {
+                  font-size: 3rem;
+                  margin-top: 0;
+                span {
+                    color: $sky;
+                }  
+              }
+              .header-btn {
+                padding: 1.7rem 2rem;
+                width: 30rem;
+                color: $primary;
+                font-size: 2rem;
+                position: relative;
+                background-color: $sky;
+
+                img {
+                    position: absolute;
+                    left: 4rem;
+                    top: 1rem;
+                    width: 2.5rem;
+                    height: auto;
+                    margin: 1rem;
+                }
+                &:hover {
+                    background-color: $primary;
+                    border: 1px solid $sky;
+                    color: $white;
+                    transition: color 1s;
+                }
+            }
+              
+           }
+        }
+
+        .navbar {
+            position: relative;
+            width: 100%;
+            height: 5rem;
+            background-color: $secondary;
+            position: absolute;
+            bottom: 0;
+
+            .menu {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                height: calc(5rem + 1px);
+                background-color: transparent;;
+                z-index: 2;
+                display: none;
+
+                #menu-icon {
+                    width: 5rem;
+                    height: 5rem;
+                    background-color: transparent;
+                    display: flex;
+                    flex-direction: column;;
+                    padding: 1.2rem 0;
+
+                    div {
+                        display: block;
+                        width: 55%;
+                        height: .2rem;
+                        margin: .3rem 0;
+                        margin-left: 26%;
+                        background-color: $white;
+                    }
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+                height: 100%;
+                padding: 0 5rem;
+                list-style: none;
+
+                li {
+                    margin: initial;
+                    height: 100%;
+                    line-height: 5rem;
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 1rem;
+                        font-size: 1.2rem;
+                        color: $white;
+                        text-decoration: none;
+                        text-transform: uppercase;
+
+                     
+                    }
+                    &:hover, &.active {
+                        & > a {
+                            color: $secondary;
+                        }
+                        background-color: $white;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    /*----X----- Header ----X-----*/
+
+    
+
+
+
+
+
+
+    /*------------ Main ------------*/
+    
+    /*------------ Services -----------*/
+
+    .section {
+        background-color: $white;
+        padding: 1rem 2rem;
+        margin-bottom: 4rem;
+
+        .section-head {
+            text-align: center;
+            margin-bottom: 3rem;
+
+            .section-title {
+                color: $primary;
+                font-size: 2.5rem;
+                margin-bottom: 0;
+                font-family: $Raleway;
+                text-transform: uppercase;
+            }
+            span {
+                display: inline-block;
+                width: 10rem;
+                height: 0.3rem;
+                background-color: $primary;
+                position: relative;
+                top: -1rem;
+            }   
+        }
+
+        .section-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-list.services-list {
+
+        }
+        
+        .section-list-item {
+            text-align: center;
+            padding-bottom: 4rem;
+            flex: 0 1 20rem;
+            margin: auto;
+            overflow: hidden;
+        }
+        .service-image {
+            width: 15rem;
+        }
+        .service-title {
+            text-transform: uppercase;
+            color: $secondary;
+            font-family: $Raleway;
+            height: 5rem;
+        }
+        .service-desc {
+            font-size: 1.4rem;
+            color: $gray;
+        }
+
+    }
+    .section.services {
+        margin-top: 4rem;
+    }
+
+    /*------X----- Services -----X-----*/
+
+
+
+
+    /*----------- Tech ----------------*/
+
+    .section.tech {
+        .section-list-item {
+            flex: 0 1 14rem;
+            margin-top: 0;
+            text-align: start;
+
+            .tech-image {
+                width: 100%;
+                height: 10rem;
+                text-align: center;
+
+                img {
+                    width: 80%;
+                    height: auto;
+                }
+            }
+
+            .tech-title {
+                text-align: center;
+                font-size: 1.7rem;
+                text-transform: uppercase;
+                color: $gray;
+                font-family: $Open-sans;
+                font-weight: 700;
+            }
+
+            .list-tech {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                margin-left: 2rem;
+                
+                li {
+                    font-size: 1.5rem;
+                    color: $primary;
+
+                    img {
+                        width: 1.5rem;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    /*-----X----- Tech --------X-------*/
+
+    
+
+
+
+    /*----------- About ---------------*/
+
+    .section.about {
+        padding-bottom: 4rem;
+
+        .content {
+            display: flex;
+            justify-content: space-between;        
+            flex-wrap: wrap;
+
+            .picture {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                padding: 2rem;
+                text-align: center;
+                min-width: 20rem;
+
+                img {
+                    width: 80%;
+                }
+
+                &:hover {
+                    scale: 1.3;
+                }
+            }
+          
+            .info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                color: $gray;
+
+                .about-text {
+                    width: 100%;
+                    padding: 2rem 1rem;
+                    
+                    .firstname {
+                        color: $primary;
+                        word-wrap: normal;
+                    }
+                    .lastname {
+                        text-transform: uppercase;
+                        color: $primary;
+                        font-weight: bold;
+                    }
+                    p {
+                        margin-top: 0;
+                        font-family: $Open-sans;
+                    }
+                }
+
+                .social-links {
+                    margin-bottom: 2rem;
+
+                    img {
+                        width: 5rem;
+                        height: 5rem;
+                        margin: 0 1rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: .7;
+                        }
+                    }
+                }
+
+                .contact-btn {
+                    padding: 1rem 10rem;
+                    background-color: $white;
+                    border: .1rem solid $primary;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    color: $primary;
+                    font-family: $Open-sans;
+                    
+                    &:hover {
+                        background-color: $primary;
+                        color: $white;
+                        transition: color 1s;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /*-----X----- About -------X-------*/
+
+
+
+
+
+
+    /*---------- Projects -------------*/
+
+    .section.projects {
+        position: relative;
+        padding-bottom: 4rem;
+       
+        .section-list.projects {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 4rem;
+
+            .section-list-item {
+                position: relative;
+                max-height: 25rem;
+                margin: 0;
+                flex: 0 1 20rem;
+
+                .image {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+    
+                .desc {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    background-color: $primary;
+                    padding: 2rem;
+                    color: $white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    &:hover {
+                        opacity: 1;
+                        transition: opacity .5s;
+                        cursor: pointer;
+                    }
+
+
+                    .project-name {
+                        display: block;
+                        width: 100%;
+                        text-align: start;
+                        font-size: 2rem;
+                        margin: 0;
+                        font-family: $Raleway;
+                    }
+    
+                    .project-desc {
+                        display: block;
+                        width: 100%;
+                        text-align: start;
+                        font-size: 1.4rem;
+                        font-weight: 200;
+                        margin: 1rem 0;
+                    }
+                    .btn-prim {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                        border-radius: .5rem;
+                        color: $gray;
+
+                        img {
+                            width: 2rem;
+                        }
+
+                        &:hover {
+                            background-color: $sky;
+                        }
+                    }
+    
+                    .main-link {
+                        display: flex;
+                        justify-content: flex-start;
+                        width: 100%;
+                        align-items: flex;
+                        margin: 1rem 0;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+                        img {
+                            width: 1.5rem;
+                            height: auto;
+                        }
+                        span {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    /*----x----- Projects -----x-------*/
+
+
+
+
+    /*------------- Blog -----------------*/
+
+    .section.blog {
+        position: relative;
+        padding-bottom: 10rem;
+        .section-list.blog {
+            
+
+            .section-list-item {
+                flex: 0 1 35rem;
+                padding: 0 1rem;
+                margin-top: 4rem;
+
+                .image {
+                    width: 100%;
+                    height: 30rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    h4 {
+                        font-size: 2rem;
+                        text-align: start;
+                        margin-bottom: 1rem;
+                    }
+                    span {
+                        color: $gray;
+                        font-size: 1.4rem;
+                        img {
+                            width: 2rem;
+                        }
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        text-align: start;
+                        color: $gray;
+                    }
+                }
+                button.btn-blog {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 4rem;
+                    border-radius: .5rem;
+                    background-color: $primary;
+                    color: $white;
+                    font-size: 1.6rem;
+
+                    img {
+                        width: 2rem;
+                        margin-left: 1rem;
+                    }
+
+                    &:hover {
+                        background-color: $background;
+                        color: $black;
+                        transition: color 1s;
+                    }
+                }
+            }
+        }
+    }
+
+    /*-----X------- Blog --------X--------*/
+
+
+    /*------------ Motif ------------------*/
+
+    .motif {
+        width: 100%;
+        margin: 15rem 0;
+        margin-bottom: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            position: relative;
+            bottom: -2rem;
+        }
+    }
+
+
+    .white {
+        width: 100%;
+        background-color: $white;
+        padding: 2rem;
+
+        .section.contact {
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 60%;
+                max-width: 40rem;
+                min-height: 20rem;
+                margin: auto;
+
+                input, textarea {
+                    width: 100%;
+                    height: 4rem;
+                    padding: 1rem 2rem;
+                    color: $primary;
+                    margin: 1rem 0;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    font-family: $Raleway;
+                    outline: none;
+                    border: none;
+                    text-transform: uppercase;
+                    background-color: $background;
+                }
+                input.email{
+                    text-transform: capitalize;
+                }
+                textarea {
+                    height: 15rem;
+                    resize: none;
+                    text-transform: none;
+                    color: $gray;
+                    font-weight: 300;
+                    line-height: 2.5rem;
+                }
+                button.btn-contact {
+                    width: 100%;
+                    height: 4rem;
+                    background-color: $primary;
+                    color: $white;
+                    border-radius: 0;
+                    font-size: 1.7rem;
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .section.partenaires {
+            .section-list-item {
+                margin: 4rem auto;
+                .service-title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    /*-----X------ Motif ---------X--------*/
+
+
+
+    
+    /*------X----- Main -----X------*/
+
+
+    /*---------- Footer ------------*/
+
+    footer.footer {
+        background-color: $secondary;
+        height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin: 0;
+            color: $white;
+            
+        }   
+    }
+
+    /*----X----- Footer ------X-----*/
+}

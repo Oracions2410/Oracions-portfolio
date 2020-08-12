@@ -35,7 +35,7 @@ function create(req, res) {
         .then(result => {
 
             res.status(201).json({
-                message: `Lien ${textConstants.ENTRY_CREATED_TEXT}`,
+                message: `Language ${textConstants.ENTRY_CREATED_TEXT}`,
                 newLang: {
                     description: newLanguage.description,
                     name: newLanguage.name,
@@ -74,7 +74,7 @@ function findAll(req, res) {
                     return {
                         _id, description, name, createdAt, updatedAt, request: {
                             type: 'GET',
-                            name: `${req.protocol}://${req.get('host') + routeConstants.LANGUAGE_BASE_END_POINT}/${_id}`
+                            url: `${req.protocol}://${req.get('host') + routeConstants.LANGUAGE_BASE_END_POINT}/${_id}`
                         }
                     }
                 })

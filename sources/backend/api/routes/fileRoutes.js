@@ -2,10 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 const fileCtrl = require('../controllers/fileController')
+const multer = require('../middlewares/multer')
 
-router.post('/', fileCtrl.create)
+router.post('/', multer, fileCtrl.create)
 router.get('/', fileCtrl.findAll)
-router.patch('/:contactId', fileCtrl.update)
-router.delete('/:contactId', fileCtrl.remove)
+router.get('/:fileId', fileCtrl.findById)
+router.patch('/:fileId', fileCtrl.update)
+router.delete('/:fileId', fileCtrl.remove)
 
 module.exports = router
