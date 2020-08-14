@@ -41,14 +41,42 @@
     margin: auto !important;
   }
 
+  body .popup-modal {
+    width: 97% !important;
+    padding: 2rem 0.2rem !important;
+  }
+  body .popup-modal .btn-close-modal {
+    width: 3rem;
+    height: 3rem;
+    right: 0;
+    top: -2.5rem;
+  }
   body .popup-modal .content {
     flex-direction: column !important;
   }
-  body .popup-modal .content .image {
+  body .popup-modal .content .images {
+    width: 100% !important;
+  }
+  body .popup-modal .content .desc {
     width: 100% !important;
   }
   body .popup-modal .content .desc .text {
+    overflow: hidden !important;
+    min-height: fit-content !important;
+    padding: 0 1rem !important;
+  }
+  body .popup-modal .content .desc ul {
+    overflow: visible !important;
+  }
+  body .section.blog-post {
     width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  body .section.blog-post img {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
   }
 }
 @media only screen and (max-width: 520px) {

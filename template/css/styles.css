@@ -62,10 +62,6 @@
   background-color: #EDEFFB;
   border-color: #EDEFFB;
 }
-.btn.more a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
 
 /*---X------ Global styles ------X------*/
 html {
@@ -100,6 +96,9 @@ body {
   /*----X---- List All projects -----X---*/
   /*-------- Blog post ------------------*/
   /*---X---- Blog post --------X---------*/
+}
+body a {
+  text-decoration: none !important;
 }
 body .scroll-top {
   opacity: 0;
@@ -560,7 +559,7 @@ body .section.blog .section-list.blog .section-list-item .text p {
   text-align: start;
   color: #616161;
 }
-body .section.blog .section-list.blog .section-list-item button.btn-blog {
+body .section.blog .section-list.blog .section-list-item .btn-blog {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -571,11 +570,11 @@ body .section.blog .section-list.blog .section-list-item button.btn-blog {
   color: #FFF;
   font-size: 1.6rem;
 }
-body .section.blog .section-list.blog .section-list-item button.btn-blog img {
+body .section.blog .section-list.blog .section-list-item .btn-blog img {
   width: 2rem;
   margin-left: 1rem;
 }
-body .section.blog .section-list.blog .section-list-item button.btn-blog:hover {
+body .section.blog .section-list.blog .section-list-item .btn-blog:hover {
   background-color: #EDEFFB;
   color: #000;
   transition: color 1s;
@@ -660,19 +659,22 @@ body footer.footer p {
   margin: 0;
   color: #FFF;
 }
-body .section.projects.all {
+body .section.all {
   margin-top: 2rem;
   margin-bottom: 8rem;
 }
-body .section.projects.all .section-head {
+body .section.all .section-head {
   text-align: end;
 }
-body .section.projects.all .section-head .section-title {
+body .section.all .section-head .section-title {
   font-size: 1.6rem;
   color: #1D3557;
 }
-body .section.projects.all .section-head span {
+body .section.all .section-head span {
   background-color: #1D3557;
+}
+body .section.all .section-list-item.project {
+  flex: 0 1 25rem !important;
 }
 body .blackout {
   position: absolute;
@@ -765,6 +767,10 @@ body .popup-modal .content {
 body .popup-modal .content .images {
   width: 70%;
   max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
 }
 body .popup-modal .content .images img {
   object-fit: cover;
@@ -825,11 +831,31 @@ body .section.blog-post {
   width: 80%;
   margin: auto;
   padding: 4rem 10%;
+  padding-bottom: 10rem;
 }
 body .section.blog-post img {
   width: 100%;
   height: auto;
   margin: 2rem 0;
+}
+body .section.blog-post .post-title {
+  color: #E63946;
+  font-size: 3rem;
+  font-size: Raleway, cursive;
+}
+body .section.blog-post .post-content {
+  color: #616161;
+}
+body .section.blog-post .post-date {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #616161;
+}
+body .section.blog-post .post-date img {
+  width: 2rem;
+  height: auto;
+  margin: 0 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -46,18 +46,47 @@
 
     body {
         .popup-modal {
+            width: 97%!important;
+            padding: 2rem .2rem !important;
+
+            .btn-close-modal {
+                width: 3rem;
+                height: 3rem;
+                right: 0;
+                top: -2.5rem;
+            }
+
             .content {
                 flex-direction: column!important;
 
-                .image {
+                .images {
                     width: 100%!important;
                 }
 
                 .desc {
-                    .text {
-                        width: 100%!important;
-                    }
+                   width: 100%!important;
+
+                   .text {
+                       overflow: hidden!important;
+                       min-height: fit-content!important;
+                       padding: 0 1rem!important;
+                   }
+
+                   ul {
+                       overflow: visible!important;
+                   }
                 }
+            }
+        }
+
+        .section.blog-post {
+            width: 100%!important;
+            padding-left: 2rem!important;
+            padding-right: 2rem!important;
+            img {
+                width: 100%;
+                height: auto;
+                margin: 2rem 0;
             }
         }
     }
