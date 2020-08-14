@@ -2,11 +2,30 @@ console.log('start')
 const navbar = document.querySelector('.navbar')
 const menu = document.querySelector('.menu')
 const scrollButton = document.querySelector('.scroll-top')
+const navLinks = document.querySelectorAll('.navbar a')
 
+const sticky = navbar.offsetTop;
 
+for (let i = 0; i < navLinks.length; ++i) {
+    navLinks[i].addEventListener('click', function (e) {
+        toggleClass(navbar, 'open')
+    })
+}
 
+window.onscroll = function () {
+    //console.log(window.pageYOffset, sticky)
+    if (window.pageYOffset >= (sticky)) {
+        console.log('Dédaaaannnnnnnns')
+        navbar.classList.add('sticky')
+    } else {
+        navbar.classList.remove('sticky')
+    }
+}
+
+onClickMenu(navbar)
 
 menu.addEventListener('click', function (e) {
+    e.stopPropagation()
     toggleClass(navbar, 'open')
 })
 
@@ -15,7 +34,7 @@ scrollButton.addEventListener('click', function (e) {
 })
 
 document.addEventListener('scroll', function (e) {
-    console.log(document.scrollingElement.scrollTop)
+    //console.log(document.scrollingElement.scrollTop)
     manageScrollButton()
 })
 
@@ -33,6 +52,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /**------------------------ Funtcions ------------------------------- */
 
+function onClickMenu(navbar) {
+    document.addEventListener("click", (evt) => {
+        const flyoutElement = navbar
+        let targetElement = evt.target; // clicked element
+
+        do {
+            if (targetElement == flyoutElement) {
+                // This is a click inside. Do nothing, just return.
+                navbar.classList.remove('open')
+                return;
+            }
+            // Go up the DOM
+            targetElement = targetElement.parentNode;
+        } while (targetElement);
+
+        // This is a click outside.
+        navbar.classList.remove('open')
+
+    });
+}
 
 function manageScrollButton() {
     if (document.scrollingElement.scrollTop === 0) {
@@ -74,3 +113,32 @@ function scrollToTop(duration) {
     }
     window.requestAnimationFrame(step);
 }
+
+
+
+
+/*------------ PROJECTS ---------------*/
+
+const blackout = document.querySelector('.blackout')
+const modal = document.querySelector('.popup-modal')
+const btnCloseModal = document.querySelector('.btn-close-modal')
+const projectItems = document.querySelectorAll('.section-list-item.project')
+
+projectItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        blackout.classList.add('is-blackedout')
+        modal.classList.add('is-visible')
+    })
+})
+
+blackout.addEventListener('click', function () {
+    modal.classList.remove('is-visible')
+    blackout.classList.remove('is-blackedout')
+})
+
+btnCloseModal.addEventListener('click', function (e) {
+    modal.classList.remove('is-visible')
+    blackout.classList.remove('is-blackedout')
+})
+
+console.log(projectItems)

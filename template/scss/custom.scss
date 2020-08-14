@@ -1,0 +1,15 @@
+body {
+    
+    .header {
+        height: auto!important;
+
+        .navbar {
+            position: fixed!important;
+            top: 0!important;
+        }
+
+        .banner {
+            display: none;
+        }
+    }
+}

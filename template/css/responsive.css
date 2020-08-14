@@ -40,6 +40,16 @@
   .header .navbar ul li {
     margin: auto !important;
   }
+
+  body .popup-modal .content {
+    flex-direction: column !important;
+  }
+  body .popup-modal .content .image {
+    width: 100% !important;
+  }
+  body .popup-modal .content .desc .text {
+    width: 100% !important;
+  }
 }
 @media only screen and (max-width: 520px) {
   body .scroll-top {

@@ -6,6 +6,11 @@
 
 /*---------- Global styles -------------*/
 
+.sticky {
+    position: fixed!important;
+    top: 0!important;
+}
+
 .container {
     width: 100%;
     padding: 2rem 10rem;
@@ -37,6 +42,7 @@
     right: 2rem;
     color: $black;
     font-size: 1.2rem;
+    text-decoration: none;
 
     img {
         margin: 0 1rem;
@@ -49,8 +55,8 @@
     }
 
     a {
-        text-decoration: none;
-        color: inherit;
+        text-decoration: none!important;
+        color: inherit!important;
     }
 
     
@@ -63,13 +69,14 @@ html {
 }
 
 body {
+    position: relative;
     font-family: $Open-sans;
     background-color: $background;
     margin: 0;
     font-size: 1.6rem;
-    height: 2400px;
 
     .scroll-top {
+        opacity: 0;
         width: 4rem;
         height: 4rem;
         border-radius: 4rem;
@@ -78,6 +85,17 @@ body {
         position: fixed;
         bottom: 2rem;right: 2rem;
         border: .1rem solid $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 40%;
+            width: auto;
+            transform: rotate(-90deg);
+        }
+
+
     }
 
     /*----------- Header ----------*/
@@ -167,12 +185,12 @@ body {
         }
 
         .navbar {
-            position: relative;
             width: 100%;
             height: 5rem;
             background-color: $secondary;
             position: absolute;
-            bottom: 0;
+            top: calc(100vh - 5rem);
+            z-index: 100;
 
             .menu {
                 position: absolute;
@@ -253,11 +271,14 @@ body {
     /*------------ Main ------------*/
     
     /*------------ Services -----------*/
-
+    main {
+        min-height: 100vh;
+    }
     .section {
         background-color: $white;
         padding: 1rem 2rem;
         margin-bottom: 4rem;
+        padding-top: 5rem;
 
         .section-head {
             text-align: center;
@@ -391,13 +412,15 @@ body {
                 padding: 2rem;
                 text-align: center;
                 min-width: 20rem;
+                transition: transform .4s;
 
                 img {
                     width: 80%;
+                    
                 }
 
                 &:hover {
-                    scale: 1.3;
+                    transform: scale(1.1);
                 }
             }
           
@@ -452,7 +475,8 @@ body {
                     text-transform: uppercase;
                     color: $primary;
                     font-family: $Open-sans;
-                    
+                    text-decoration: none;
+
                     &:hover {
                         background-color: $primary;
                         color: $white;
@@ -753,6 +777,9 @@ body {
     /*---------- Footer ------------*/
 
     footer.footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         background-color: $secondary;
         height: 7rem;
         display: flex;
@@ -767,4 +794,210 @@ body {
     }
 
     /*----X----- Footer ------X-----*/
+
+
+
+
+
+
+    /*--------- List All projects ---------*/
+
+    .section.projects.all {
+        margin-top: 2rem;
+        margin-bottom: 8rem;
+
+        .section-head {
+            text-align: end;
+            
+            .section-title {
+                font-size: 1.6rem;
+                color: $secondary;
+            }
+            span {
+                background-color: $secondary;
+            }
+            
+        }
+    }
+
+    .blackout {
+        position: absolute;
+        top: 0;right: 0;left: 0; bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.65);
+        z-index: 1000;
+        display: none;
+
+        &.is-blackedout {
+            display: block;
+        }
+    }
+
+    .popup-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $white;
+        width: 90%;
+        height: 90%;
+        min-height: 42rem;
+        z-index: 1011;
+        pointer-events: none;
+        opacity: none;
+        transition: all 300ms ease-in-out;
+        opacity: 0;
+
+        &.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+
+        .btn-close-modal {
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            background-color: $secondary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -2rem;
+            top: -2rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: $white;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary;
+            }
+        }
+        .head {
+            height: 10%;
+            border-bottom: .1rem solid $background;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .title {
+                text-transform: uppercase;
+                color: $secondary;
+            }
+            .btn-project-show {
+                display: inline-block;
+                text-decoration: none;
+                border-radius: .1rem;
+                padding: .5rem 2rem;
+                background-color: $primary;
+                color: $white;
+                font-family: $Raleway;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $background;
+                    color: $black;
+                }
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            overflow: auto;
+
+            .images {
+                width: 70%;
+                max-height: 100%;
+                img {
+                    object-fit: cover;
+                    width: 95%;
+                    height: 100%;
+                }
+            }
+            .desc {
+                width: 30%;
+
+                .text {
+                    font-size: 1.4rem;
+                    color: $gray;
+                    max-height: 60%;
+                    overflow: auto;
+                }
+
+                ul {
+                    max-height: 15rem;
+                    overflow: auto;
+                    font-size: 1.4rem;
+                    color: $primary;
+                }
+            }
+        }
+
+        .modal-footer {
+            position: absolute;
+            bottom: 0;left: 0;right: 0;
+            width: 100%;
+            height: 10%;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            
+            .links {
+                cursor: pointer;
+                img {
+                    width: 3rem;
+                    height: auto;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            span {
+                padding-left: 2rem;
+                color: $black;
+                font-size: 1.8rem;
+                display: flex;
+                justify-self: center;
+
+                img {
+                    width: 3rem;
+                    height: auto;
+                    margin: 0 1rem;
+                }
+            }
+
+           
+        }
+
+    }
+
+    /*----X---- List All projects -----X---*/
+
+
+    /*-------- Blog post ------------------*/
+
+    .section.blog-post {
+        width: 80%;
+        margin: auto;
+        padding: 4rem 10%;
+
+        img {
+            width: 100%;
+            height: auto;
+            margin: 2rem 0;
+        }
+    }
+
+    /*---X---- Blog post --------X---------*/
 }
