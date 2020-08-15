@@ -15,7 +15,7 @@ for (let i = 0; i < navLinks.length; ++i) {
 window.onscroll = function () {
     //console.log(window.pageYOffset, sticky)
     if (window.pageYOffset >= (sticky)) {
-        console.log('Dédaaaannnnnnnns')
+        //console.log('Dédaaaannnnnnnns')
         navbar.classList.add('sticky')
     } else {
         navbar.classList.remove('sticky')
