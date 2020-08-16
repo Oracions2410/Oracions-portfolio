@@ -13,21 +13,16 @@ const AboutMe = () => {
 
             <div class="content">
                 <div class="picture">
-                    <a href="" target="_blank">
+                    <a href="./images/IMG_20200813_102019.jpg" target="_blank">
                         <img src="./images/IMG_20200813_102019.jpg" alt="Oracions picture" />
                     </a>
                 </div>
 
                 <div class="info">
                     <div class="about-text">
-                        Mon nom est <span class="firstname">Louis-Mary</span>&nbsp;<span
+                        My name is <span class="firstname">Louis-Mary</span>&nbsp;<span
                             class="lastname">MONJENGUE</span>
-                        <p>Je suis développeur web full stack à Douala, Cameroun afrique centrale. J'ai une passion
-                        pour
-                        le
-                        design des effets et animations, la programation de manière générale ainsi que
-                        l'administration
-                système sous Linux.</p>
+                        <p>I am a full stack web developper in Douala Cameroun. I am passionate about design of animations and effects, general programming and also system administration on Linux</p>
                     </div>
 
                     <div class="social-links">

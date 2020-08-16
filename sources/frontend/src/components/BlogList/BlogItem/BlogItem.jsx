@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const BlogItem = () => {
+const BlogItem = ({ post }) => {
+
+    if (!post) {
+        return 'Loading...'
+    }
+
+
     return <React.Fragment>
 
 
@@ -12,12 +18,11 @@ const BlogItem = () => {
             </div>
 
             <div class="text">
-                <h4>Bien débuter en Programmation</h4>
-                <span><img src="./images/icons/date.svg" alt="" /> April 29 2020</span>
-                <p>La programmation informatique est un des plus vaste domaine qui a connue une très grande
-extension ces dernière...</p>
+                <h4>{post.title}</h4>
+                <span><img src="./images/icons/date.svg" alt="" /> {post.created_at}</span>
+                <p>{post.intro.substring(0, 200) + '...'}</p>
             </div>
-            <Link to='' class="btn btn-blog">En savoir plus <img
+            <Link to={`/blog/posts/${post._id}`} class="btn btn-blog">Lean more <img
                 src="./images/icons/arrow-white.svg" alt="" /></Link>
 
         </div>
