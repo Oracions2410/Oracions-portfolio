@@ -40,21 +40,54 @@ const Header = () => {
                 </div>
                 <ul>
                     <li class="active">
-                        <Link
-                            to={{
-                                pathname: '/home',
-                                state: {
-                                    fromBanner: true,
-                                },
-                                hash: "#home"
-                            }}
-                        >Home</Link>
+                        <HashLink
+                            to="/home#home"
+                            smooth={true}
+                            duration={500}
+                        >Home</HashLink>
                     </li>
-                    <li><HashLink to='/'>Services</HashLink></li>
-                    <li><HashLink to='/'>Portefolio</HashLink></li>
-                    <li><HashLink to='/'>Blog</HashLink></li>
-                    <li><HashLink to='/'>contact</HashLink></li>
-                    <li><HashLink to='/'>About</HashLink></li>
+
+                    <li>
+                        <HashLink
+                            to='/home#services'
+                            smooth={true}
+                            duration={500}
+                        >Services</HashLink>
+                    </li>
+
+                    <li>
+                        <HashLink to='/home#my-work'
+                            smooth={true}
+                            duration={500}
+                        >Portefolio</HashLink>
+                    </li>
+
+                    <li>
+                        <HashLink
+                            to='/home#blog'
+                            smooth={true}
+                            duration={500}
+                        >Blog
+                        </HashLink>
+                    </li>
+
+                    <li>
+                        <HashLink
+                            to='/home#contact'
+                            smooth={true}
+                            duration={500}
+                        >contact
+                        </HashLink>
+                    </li>
+
+                    <li>
+                        <HashLink
+                            to='/home#about'
+                            smooth={true}
+                            duration={500}
+                        >About
+                        </HashLink>
+                    </li>
                 </ul>
             </div>
 

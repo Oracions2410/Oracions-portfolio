@@ -48,6 +48,7 @@ const App = () => {
             <Popup setElement={setPopupModal} project={selectedProject} />
 
             <Route path='/' exact render={() => <Home projects={projects} select={setProject} posts={posts} />} />
+            <Route path='/home' exact render={() => <Home projects={projects} select={setProject} posts={posts} />} />
             <Route path='/blog' render={() => <Blog posts={posts} />} />
             <Route path='/projects' render={() => <Projects projects={projects} select={setProject} />} />
 
