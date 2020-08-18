@@ -24,7 +24,6 @@ const Home = ({ projects, select, posts }) => {
 
                 <Contact />
 
-                <Partenaires />
 
             </div>
         </div>

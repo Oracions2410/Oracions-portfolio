@@ -43,6 +43,14 @@ const Tech = () => {
                             <img src="./images/icons/checked.svg" alt="" />
                             <span class="tech-name">Swing</span>
                         </li>
+                        <li>
+                            <img src="./images/icons/checked.svg" alt="" />
+                            <span class="tech-name">JavaFX</span>
+                        </li>
+                        <li>
+                            <img src="./images/icons/checked.svg" alt="" />
+                            <span class="tech-name">Rabbitmq</span>
+                        </li>
                     </ul>
                 </div>
 
@@ -121,10 +129,6 @@ const Tech = () => {
                         </li>
                         <li>
                             <img src="./images/icons/checked.svg" alt="" />
-                            <span class="tech-name">Owl-carousel</span>
-                        </li>
-                        <li>
-                            <img src="./images/icons/checked.svg" alt="" />
                             <span class="tech-name">Angular</span>
                         </li>
                         <li>
@@ -134,6 +138,14 @@ const Tech = () => {
                         <li>
                             <img src="./images/icons/checked.svg" alt="" />
                             <span class="tech-name">Vue JS</span>
+                        </li>
+                        <li>
+                            <img src="./images/icons/checked.svg" alt="" />
+                            <span class="tech-name">Redux</span>
+                        </li>
+                        <li>
+                            <img src="./images/icons/checked.svg" alt="" />
+                            <span class="tech-name">Axios</span>
                         </li>
                     </ul>
                 </div>
@@ -150,6 +162,10 @@ const Tech = () => {
                         <li>
                             <img src="./images/icons/checked.svg" alt="" />
                             <span class="tech-name">Express JS</span>
+                        </li>
+                        <li>
+                            <img src="./images/icons/checked.svg" alt="" />
+                            <span class="tech-name">Socket.IO</span>
                         </li>
                     </ul>
                 </div>

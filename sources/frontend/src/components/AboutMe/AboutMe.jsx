@@ -26,10 +26,10 @@ const AboutMe = () => {
                     </div>
 
                     <div class="social-links">
-                        <img src="./images/icons/fb.svg" alt="Facebook" />
-                        <img src="./images/icons/twitter.svg" alt="Twitter" />
-                        <img src="./images/icons/linkedin.svg" alt="Linkedin" />
-                        <img src="./images/icons/github.svg" alt="Github" />
+                        <a target="_blank" href="https://www.facebook.com/louismary.monjengue.39"><img src="./images/icons/fb.svg" alt="Facebook" /></a>
+                        <a target="_blank" href="https://twitter.com/Oracions2410"><img src="./images/icons/twitter.svg" alt="Twitter" /></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/louis-mary-monjengue-a73214182/"><img src="./images/icons/linkedin.svg" alt="Linkedin" /></a>
+                        <a target="_blank" href="https://github.com/Oracions2410"><img src="./images/icons/github.svg" alt="Github" /></a>
                     </div>
 
                     <a href="#contact" class="btn contact-btn">Contact me</a>

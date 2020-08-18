@@ -1,11 +1,93 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link'
+import { useLocation } from 'react-router-dom'
+
+import './Custom.module.css'
 
 const Header = () => {
+    let location = useLocation()
 
 
+    //alert(location.pathname)
 
+    if (!(location.pathname === '/home' || location.pathname === '/')) {
+        return <React.Fragment>
+
+
+            <header style={{ height: 'auto' }} id="home" class="header">
+
+                <div class="topbar">
+                    <span>Oracions.dev@gmail.com</span>
+                    <img src="./images/icons/topbar-icon.svg" alt="" />
+                    <span>+237 656-914-671</span>
+                </div>
+
+                <div style={{ position: 'fixed', top: '0' }} class="navbar">
+                    <div class="menu">
+                        <div id="menu-icon">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <HashLink
+                                to="/home#home"
+                                smooth={true}
+                                duration={500}
+                            >Home</HashLink>
+                        </li>
+
+                        <li>
+                            <HashLink
+                                to='/home#services'
+                                smooth={true}
+                                duration={500}
+                            >Services</HashLink>
+                        </li>
+
+                        <li>
+                            <HashLink to='/home#my-work'
+                                smooth={true}
+                                duration={500}
+                            >Portefolio</HashLink>
+                        </li>
+
+                        <li>
+                            <HashLink
+                                to='/home#blog'
+                                smooth={true}
+                                duration={500}
+                            >Blog
+                        </HashLink>
+                        </li>
+
+                        <li>
+                            <HashLink
+                                to='/home#contact'
+                                smooth={true}
+                                duration={500}
+                            >contact
+                        </HashLink>
+                        </li>
+
+                        <li>
+                            <HashLink
+                                to='/home#about'
+                                smooth={true}
+                                duration={500}
+                            >About
+                        </HashLink>
+                        </li>
+                    </ul>
+                </div>
+
+            </header>
+
+
+        </React.Fragment>
+    }
 
     return <React.Fragment>
 

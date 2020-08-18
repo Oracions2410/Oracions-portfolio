@@ -4,6 +4,28 @@ import { ProjectsList } from '../components'
 
 const Projects = ({ select, projects }) => {
 
+    const designProjects = projects
+        ? projects.filter(project => project.category === 'design')
+        : null
+
+    const templateProjects = projects
+        ? projects.filter(project => project.category === 'template')
+        : null
+
+    const frontendProjects = projects
+        ? projects.filter(project => project.category === 'frontend')
+        : null
+
+    const backendProjects = projects
+        ? projects.filter(project => project.category === 'backend')
+        : null
+
+    const completeProjects = projects
+        ? projects.filter(project => project.category === 'app')
+        : null
+
+
+
     return <React.Fragment>
 
 
@@ -17,17 +39,11 @@ const Projects = ({ select, projects }) => {
 
 
                 <div class="section-head">
-                    <h3 class="section-title">Template integration</h3>
+                    <h3 class="section-title">Web Design</h3>
                     <span class="underline"></span>
                 </div>
 
-                <ProjectsList projects={projects} selected={select} />
-
-
-
-
-
-
+                <ProjectsList projects={designProjects} selected={select} />
 
 
 
@@ -36,18 +52,18 @@ const Projects = ({ select, projects }) => {
                     <span class="underline"></span>
                 </div>
 
-                <ProjectsList projects={projects} selected={select} />
+                <ProjectsList projects={templateProjects} selected={select} />
 
 
 
 
                 <div class="section-head">
-                    <h3 class="section-title">API Integration</h3>
+                    <h3 class="section-title">API Integration in Frontend</h3>
                     <span class="underline"></span>
                 </div>
 
 
-                <ProjectsList projects={projects} selected={select} />
+                <ProjectsList projects={frontendProjects} selected={select} />
 
 
 
@@ -56,7 +72,13 @@ const Projects = ({ select, projects }) => {
                     <span class="underline"></span>
                 </div>
 
-                <ProjectsList projects={projects} selected={select} />
+                <ProjectsList projects={backendProjects} selected={select} />
+                <div class="section-head">
+                    <h3 class="section-title">Complete project (Frontend + Backend)</h3>
+                    <span class="underline"></span>
+                </div>
+
+                <ProjectsList projects={completeProjects} selected={select} />
 
 
 

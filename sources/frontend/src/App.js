@@ -7,7 +7,7 @@ import fechedPosts from './assets/posts/posts'
 import fechedProjects from './assets/projects/projects'
 
 
-const App = () => {
+const App = ({ location }) => {
     const [selectedProject, setSelectedProject] = useState(null)
     const [popupModal, setPopupModal] = useState(null)
     const [bodyBlackout, setBodyBlackout] = useState(null)
