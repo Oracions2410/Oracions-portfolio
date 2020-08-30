@@ -147,6 +147,10 @@ const Tech = () => {
                             <img src="./images/icons/checked.svg" alt="" />
                             <span class="tech-name">Axios</span>
                         </li>
+                        <li>
+                            <img src="./images/icons/checked.svg" alt="" />
+                            <span class="tech-name">React Native</span>
+                        </li>
                     </ul>
                 </div>
 

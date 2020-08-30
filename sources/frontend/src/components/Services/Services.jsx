@@ -15,7 +15,7 @@ const Services = () => {
                     <img class="service-image" src="./images/icons/Services'.svg" alt="" />
                     <h4 class="service-title">Intuitive UI/UX Design</h4>
                     <div class="service-desc">
-                        Building of web application mockups and user experience design
+                        Creation of web application mockups and user experience design (UI/UX)
         </div>
                 </div>
 
@@ -37,7 +37,7 @@ const Services = () => {
                     <img class="service-image" src="./images/icons/Services.svg" alt="" />
                     <h4 class="service-title">SPA And Web Site Building </h4>
                     <div class="service-desc">
-                        Building of Single Page Application and Multiple Page Application
+                        Construction of Single Page Application (SPA) and Multiple Page Application(MPA)
         </div>
                 </div>
 
@@ -49,7 +49,7 @@ const Services = () => {
                     <img class="service-image" src="./images/icons/Groupe 191.svg" alt="" />
                     <h4 class="service-title">Database Architecture Design and API Integration</h4>
                     <div class="service-desc">
-                        Backend architecture desgin, APIs building and implementation</div>
+                        Design of the architecture of the back-end of the app, construction and implementation of the APIs</div>
                 </div>
 
             </div>

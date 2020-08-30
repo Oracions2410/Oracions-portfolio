@@ -3,7 +3,7 @@ export default [
         _id: 1,
         name: 'My Tube YouTube clone application',
         desc: 'YouTube clone application build with ReactJS and Youtube V3 API',
-        imagepath: './images/mytube.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1YeItK8nBfmHv4i5Bxash0zAFmZs7l28l',
         category: 'frontend',
         links:
         {
@@ -27,7 +27,7 @@ export default [
         _id: 2,
         name: 'Covid19 Tracker',
         desc: 'Corora application tracker, affiche le nombre des cas de maladie et décès causé par le Covid19 ainsi que le nombre de cas guérrie de cette maladie. Les données sont formattée et classée par payss.',
-        imagepath: './images/covid19.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1SUL46fCP30SwNXj3G36iP1CdwGG4gSNr',
         category: 'frontend',
         links:
         {
@@ -51,7 +51,7 @@ export default [
         _id: 3,
         name: 'Innotech',
         desc: 'Blog de vidéos regroupé par categories',
-        imagepath: './images/innotech.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1nO3_qw6peVehe2rC2aKYo-CqVgqf0Scp',
         category: 'app',
         links:
         {
@@ -75,11 +75,11 @@ export default [
         _id: 4,
         name: 'Oracions',
         desc: 'Portfolio',
-        imagepath: './images/oracions.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1saQxDDn0pbMRvO-jQnMc5eIf3nPXTFdB',
         category: 'app',
         links:
         {
-            repo: '#',
+            repo: 'https://github.com/Oracions2410/Oracions-portfolio',
             app: 'https://oracions.netlify.com/'
         },
         tech: [
@@ -103,11 +103,11 @@ export default [
         _id: 5,
         name: 'Oracions Design',
         desc: 'Design et intégration de la maquette du portfolio Oracions avec AdobeXD',
-        imagepath: './images/oracions-design.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1VfoLUypqH63AbBr1jbCgP1n3ozTRuM6R',
         category: 'design',
         links:
         {
-            repo: '#',
+            repo: 'https://github.com/Oracions2410/Oracions-portfolio/tree/master/Design',
             app: 'https://oracions.netlify.com/'
         },
         tech: [
@@ -127,7 +127,7 @@ export default [
         _id: 6,
         name: 'Blogger',
         desc: 'Template d\'un blog modern',
-        imagepath: './images/blogger.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1mWRtyTELyrq6wBaRczPpuB7_DiVg94kS',
         category: 'template',
         links:
         {
@@ -147,7 +147,7 @@ export default [
         _id: 7,
         name: 'Darkseid',
         desc: 'Template modern d\'un site E-commerce inspiré de Amazon',
-        imagepath: './images/darkseid.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1MoNyWfwa9rAYQYpRyAFuOM7yWbmfV7b3',
         category: 'template',
         links:
         {
@@ -168,7 +168,7 @@ export default [
         _id: 8,
         name: 'Bly',
         desc: 'Application de gestion de livre numériques',
-        imagepath: './images/bly.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1JzOYcKW1Zc8mJ5BHFt94-5AuK4GGCAMb',
         category: 'design',
         links:
         {
@@ -188,7 +188,7 @@ export default [
         _id: 9,
         name: 'Darkseid API',
         desc: 'API pour un site E-commerce comme Amazone',
-        imagepath: './images/darkseid.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1MoNyWfwa9rAYQYpRyAFuOM7yWbmfV7b3',
         category: 'backend',
         links:
         {
@@ -211,7 +211,7 @@ export default [
         _id: 10,
         name: 'Movies API',
         desc: 'API d\'enregistrement de vidéos',
-        imagepath: './images/laravel.png',
+        imagepath: 'https://drive.google.com/uc?export=view&id=1S-cWDLzkN_ize6dWcnN1jtmqxiTqcfcx',
         category: 'backend',
         links:
         {
@@ -235,7 +235,7 @@ export default [
         _id: 11,
         name: 'NodeJS API',
         desc: 'ExpressJS Base CRUD API',
-        imagepath: './images/nodejs.jpg',
+        imagepath: 'https://drive.google.com/uc?export=view&id=15771b1FGwOfXsMgjZpTxxTzY5Wla9VFp',
         category: 'backend',
         links:
         {

@@ -14,7 +14,7 @@ const BlogItem = ({ post }) => {
         <div class="section-list-item">
 
             <div class="image">
-                <img src="./images/blog.svg" alt="" />
+                <img src={post.image} alt="" />
             </div>
 
             <div class="text">

@@ -32,11 +32,7 @@ const Header = () => {
                     </div>
                     <ul>
                         <li class="active">
-                            <HashLink
-                                to="/home#home"
-                                smooth={true}
-                                duration={500}
-                            >Home</HashLink>
+                            <a href="/">Home</a>
                         </li>
 
                         <li>
@@ -101,7 +97,7 @@ const Header = () => {
             </div>
 
             <div class="banner">
-                <img class="left-image" src="./images/icons/banner-left.svg" alt="" />
+                <img class="left-image" src="https://drive.google.com/uc?export=view&id=1JVZ3oDo1lEdBO_yNsMQ5QcpDqcVEeUoy" alt="" />
                 <div class="intro">
                     <h2 class="text-intro">Hello, I'm <span>Oracion's</span></h2>
                     <h2 class="text-intro">I'm a full stack developper</h2>
@@ -109,7 +105,7 @@ const Header = () => {
                         src="./images/icons/arrow-button.svg" alt="" />View
                 my work</button></a>
                 </div>
-                <img class="right-image" src="./images/icons/lines.svg" alt="" />
+                <img class="right-image" src="https://drive.google.com/uc?export=view&id=1sJ_eCgjT6CH7_70x9C_mwHGSnlOSDAf2" alt="" />
             </div>
 
             <div class="navbar">
@@ -122,11 +118,7 @@ const Header = () => {
                 </div>
                 <ul>
                     <li class="active">
-                        <HashLink
-                            to="/home#home"
-                            smooth={true}
-                            duration={500}
-                        >Home</HashLink>
+                        <a href="/">Home</a>
                     </li>
 
                     <li>

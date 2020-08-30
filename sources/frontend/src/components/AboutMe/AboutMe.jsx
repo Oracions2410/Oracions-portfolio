@@ -13,8 +13,8 @@ const AboutMe = () => {
 
             <div class="content">
                 <div class="picture">
-                    <a href="./images/IMG_20200813_102019.jpg" target="_blank">
-                        <img src="./images/IMG_20200813_102019.jpg" alt="Oracions picture" />
+                    <a href="https://drive.google.com/uc?export=view&id=1ZdnYMg9NarwMTlxpAbY7tcDj6RCMKZfF" target="_blank">
+                        <img src="https://drive.google.com/uc?export=view&id=1ZdnYMg9NarwMTlxpAbY7tcDj6RCMKZfF" alt="Oracions picture" />
                     </a>
                 </div>
 
@@ -22,7 +22,7 @@ const AboutMe = () => {
                     <div class="about-text">
                         My name is <span class="firstname">Louis-Mary</span>&nbsp;<span
                             class="lastname">MONJENGUE</span>
-                        <p>I am a full stack web developper in Douala Cameroun. I am passionate about design of animations and effects, general programming and also system administration on Linux</p>
+                        <p>I am a Fullstack web developer in Douala, Cameroon Central Africa. I have a passion for the design of effects and animation, programming in general as well as system administration under Linux.</p>
                     </div>
 
                     <div class="social-links">

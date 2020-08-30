@@ -1,9 +1,9 @@
 @font-face {
-  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap");
   font-family: Open-sans;
 }
 @font-face {
-  src: url("../fonts//Raleway/Raleway-VariableFont_wght.ttf");
+  src: url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300&display=swap");
   font-family: Raleway;
 }
 /*---------------- Theme fonts -------------------*/
